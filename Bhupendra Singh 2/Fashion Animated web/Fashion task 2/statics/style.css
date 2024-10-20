@@ -193,20 +193,33 @@ header {
 .hero-text {
     animation: fadeIn 2s ease-in-out;
 }
-
+/*shop now btn*/
 .btn {
-    background-color: #e67e22;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top, border-left, border-bottom, border-right,
+      box-shadow;
+  }
+  
+  .btn:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+      rgba(240, 46, 170, 0.2) 15px 15px;
+  }
+  
 
-.btn:hover {
-    background-color: #d35400;
-}
 
 /* About Section Styling */
 .about-section {
