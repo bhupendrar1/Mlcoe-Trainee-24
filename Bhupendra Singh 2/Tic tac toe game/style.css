@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://media.istockphoto.com/id/1404004395/photo/tic-tac-toe-concept-business-woman-wins-the-ox-game.jpg?s=2048x2048&w=is&k=20&c=2GJK1tktiPAxUNlWM1YKRaKqOWSM1rY4Mxt7IDRMzGs=);
+    text-align: center;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #403d39;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: gold;
+}
+
+h1{
+    color: goldenrod;
+}
+
+h1:hover {
+    color: white;
+}
+
+.container {
+    height: 70vh; /* giving webpage to 70% container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+
+}
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow:  0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b041b0;
+  background-color: #fefae0;
+}
+.box:hover{
+    background-color: lightblue;
+}
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+
+#reset-btn:hover {
+    color: #f6bd60;
+}
+
+#new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+
+}
+#msg {
+    color: coral;
+    font-size: 5vmin;
+}
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+ }
+
+ 
+
+/* Section Layout */
+section {
+    padding: 40px;
+    margin: 20px;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Overview Section */
+#game-overview {
+    text-align: center;
+    color: blueviolet;
+}
+#game-overview p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: black;
+}
+
+/* How to Play Section */
+#how-to-play {
+    text-align: center;
+    color: blueviolet;
+}
+#how-to-play ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+}
+#how-to-play ul li {
+    margin-bottom: 10px;
+  color: black;
+    font-size: 1.1em;
+}
+#how-to-play ul li:hover {
+    transition: color 0.3s ease;
+}
+
+/* Interactive Game Demo Section */
+#game-demo {
+    text-align: center;
+}
+#game-demo h2 {
+    margin-bottom: 20px;
+}
+#tic-tac-toe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+.grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.grid-item:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ /* Scroll Animation */
+ .scroll-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+.scroll-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*footer section*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+    cursor: pointer;
+}
+ /* animation*/
+
+ .game-board.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+.game-board.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
