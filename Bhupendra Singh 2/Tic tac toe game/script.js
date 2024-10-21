@@ -4,7 +4,7 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; //playerX, playerO
+let turnO = true; //playerX, playerO  Tracks whose turn it is. If true, it's O's turn; if false, it's X's turn.
 let count = 0; //To Track Draw
 
 const winPatterns = [
